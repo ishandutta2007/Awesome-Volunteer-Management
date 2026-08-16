@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Glowing Node Gradients -->
+    <radialGradient id="glowNode1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowNode2">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="1" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowNode3">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="1" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowNode4">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="1" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
+    </radialGradient>
+
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 900; font-size: 56px; fill: #ffffff; }
+      .subtitle { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 400; font-size: 24px; fill: #94a3b8; }
+      .badge-text { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 600; font-size: 14px; fill: #ffffff; }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; r: 6; }
+        50% { opacity: 1; r: 9; }
+      }
+      @keyframes slide {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .floating-group { animation: float 6s ease-in-out infinite; transform-origin: center; }
+      .pulse-circle { animation: pulse 3s infinite ease-in-out; }
+      .flow-line { 
+        stroke-dasharray: 10; 
+        animation: slide 2s linear infinite; 
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)" rx="24" />
+
+  <!-- Grid Pattern Overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 50 H1200 M0 100 H1200 M0 150 H1200 M0 200 H1200 M0 250 H1200 M0 300 H1200 M0 350 H1200" />
+    <path d="M100 0 V400 M200 0 V400 M300 0 V400 M400 0 V400 M500 0 V400 M600 0 V400 M700 0 V400 M800 0 V400 M900 0 V400 M1000 0 V400 M1100 0 V400" />
+  </g>
+
+  <!-- Left Content -->
+  <g transform="translate(80, 140)">
+    <text class="title" x="0" y="0">Awesome Volunteer</text>
+    <text class="title" x="0" y="64" fill="#38bdf8">Management 🤝</text>
+    <text class="subtitle" x="0" y="120">Curated ecosystem of SaaS &amp; Open-Source platforms</text>
+    <text class="subtitle" x="0" y="156">for recruitment, scheduling, and impact reporting.</text>
+    
+    <!-- Pills -->
+    <g transform="translate(0, 200)">
+      <rect width="140" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+      <text class="badge-text" x="70" y="21" text-anchor="middle">SaaS Platforms</text>
+    </g>
+    <g transform="translate(160, 200)">
+      <rect width="160" height="32" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5" />
+      <text class="badge-text" x="80" y="21" text-anchor="middle">Open-Source Apps</text>
+    </g>
+    <g transform="translate(340, 200)">
+      <rect width="150" height="32" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="1.5" />
+      <text class="badge-text" x="75" y="21" text-anchor="middle">Community CRMs</text>
+    </g>
+  </g>
+
+  <!-- Right Graphic - Animated Network -->
+  <g transform="translate(850, 200)" class="floating-group">
+    
+    <!-- Connecting Lines -->
+    <g stroke="#ffffff" stroke-width="2" stroke-opacity="0.2">
+      <line x1="0" y1="0" x2="-100" y2="-80" />
+      <line x1="0" y1="0" x2="100" y2="-80" />
+      <line x1="0" y1="0" x2="-80" y2="100" />
+      <line x1="0" y1="0" x2="120" y2="70" />
+    </g>
+
+    <!-- Animated Data Flows -->
+    <g stroke-width="3" fill="none" opacity="0.6">
+      <line x1="0" y1="0" x2="-100" y2="-80" stroke="#38bdf8" class="flow-line" />
+      <line x1="100" y1="-80" x2="0" y2="0" stroke="#a78bfa" class="flow-line" />
+      <line x1="0" y1="0" x2="-80" y2="100" stroke="#f472b6" class="flow-line" />
+      <line x1="120" y1="70" x2="0" y2="0" stroke="#34d399" class="flow-line" />
+    </g>
+
+    <!-- Outer Nodes -->
+    <!-- Node 1 -->
+    <circle cx="-100" cy="-80" r="30" fill="url(#glowNode1)" opacity="0.5" />
+    <circle cx="-100" cy="-80" r="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="-100" cy="-80" r="6" fill="#38bdf8" class="pulse-circle" />
+    
+    <!-- Node 2 -->
+    <circle cx="100" cy="-80" r="30" fill="url(#glowNode2)" opacity="0.5" />
+    <circle cx="100" cy="-80" r="12" fill="#0f172a" stroke="#a78bfa" stroke-width="2" />
+    <circle cx="100" cy="-80" r="6" fill="#a78bfa" class="pulse-circle" style="animation-delay: 0.5s" />
+
+    <!-- Node 3 -->
+    <circle cx="-80" cy="100" r="30" fill="url(#glowNode3)" opacity="0.5" />
+    <circle cx="-80" cy="100" r="12" fill="#0f172a" stroke="#f472b6" stroke-width="2" />
+    <circle cx="-80" cy="100" r="6" fill="#f472b6" class="pulse-circle" style="animation-delay: 1s" />
+
+    <!-- Node 4 -->
+    <circle cx="120" cy="70" r="30" fill="url(#glowNode4)" opacity="0.5" />
+    <circle cx="120" cy="70" r="12" fill="#0f172a" stroke="#34d399" stroke-width="2" />
+    <circle cx="120" cy="70" r="6" fill="#34d399" class="pulse-circle" style="animation-delay: 1.5s" />
+
+    <!-- Center Hub -->
+    <circle cx="0" cy="0" r="40" fill="#0f172a" stroke="#cbd5e1" stroke-width="3" />
+    <!-- Heart Icon inside hub -->
+    <path d="M0 10 C-15 -5 -10 -20 0 -10 C10 -20 15 -5 0 10" fill="#f87171" transform="scale(1.5) translate(0, 2)" />
+  </g>
+</svg>
