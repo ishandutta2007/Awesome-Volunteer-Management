@@ -59,7 +59,7 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 
 ## 💻 Open-Source GitHub Projects
 
-| Project | Description | Stars |
+| Project | Description | Github_Stars |
 |---------|-------------|-------|
 | **[rubyforgood/casa](https://github.com/rubyforgood/casa)** | Volunteer management system designed for CASA (Court Appointed Special Advocates). | [![Stars](https://img.shields.io/github/stars/rubyforgood/casa?style=social&color=white)](https://github.com/rubyforgood/casa/stargazers) |
 | **[civicrm/org.civicrm.volunteer](https://github.com/civicrm/org.civicrm.volunteer)** | CiviVolunteer extension adds signup, scheduling, hour tracking to CiviCRM. | [![Stars](https://img.shields.io/github/stars/civicrm/org.civicrm.volunteer?style=social&color=white)](https://github.com/civicrm/org.civicrm.volunteer/stargazers) |
